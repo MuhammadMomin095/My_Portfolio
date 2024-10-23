@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
                         },
                         {
                             title: "Calculator",
-                            imgSrc: "/images/calculator.png",
+                            imgSrc: "/images/Calculator.png",
                             description: "This project was built using HTML, CSS, and TypeScript to check my skills.",
                             link: "http://calculator-zeta-beige.vercel.app"
                         },
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
                         },
                         {
                             title: "ATM Simulation",
-                            imgSrc: "/images/atm.png",
+                            imgSrc: "/images/ATM.png",
                             description: "This project was built using HTML, CSS, and TypeScript to check my skills.",
                             link: "http://atm-puce.vercel.app"
                         },
@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
                         },
                         {
                             title: "Adventure Game",
-                            imgSrc: "/images/adventure game.png",
+                            imgSrc: "/images/Adventure game.png",
                             description: "This project was built using HTML, CSS, and TypeScript to check my skills.",
                             link: "http://adventure-game-omega.vercel.app"
                         },                       
@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
                         },
                         {
                             title: "To-Do List",
-                            imgSrc: "/images/list.png",
+                            imgSrc: "/images/List.png",
                             description: "This project was built using HTML, CSS, and TypeScript to check my skills.",
                             link: "http://to-do-list-eta-eight-96.vercel.app"
                         }
