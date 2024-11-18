@@ -4,30 +4,22 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-cover bg-center relative z-10" 
-         style={{ backgroundImage: 'url("/images/6.jpg")'      }}>
-    
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-   
-      {/* Navbar */}
-      <div className="relative z-10">
-        <Navbar />
-      </div>
+     <div className='bg-gradient-to-r from-black via-gray-950 to-black'>
+    <Navbar />
+  
+    <div className="min-h-screen bg-gradient-to-r from-black via-gray-950 to-black bg-cover bg-center relative z-10 pt-64" >
 
-      {/* Hero Section */}
-      <div className="relative z-10 text-center mt-24">
+       
+     
+      <div className="relative z-10 text-center">
         <img 
           src="/images/Momin.jpg" 
           alt="Muhammad Momin" 
-          className="mx-auto rounded-full w-32 h-32 border-4 border-emerald-400 shadow-lg" 
+          className="mx-auto rounded-full w-48 h-48 border-4 border-emerald-400 shadow-lg transition-transform duration-500 ease-in-out hover:scale-105" 
         />
-    <h1 className="text-6xl mt-7 font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-yellow-400 to-green-300">
+    <h1 className="text-6xl mt-7 font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-yellow-400 to-green-300 drop-shadow-[2px_2px_4px_rgba(220,38,38,0.8)] transition-transform duration-500 ease-in-out hover:scale-105">
     Welcome to My Portfolio
 </h1>
-
-
-
-
 
         <p className="mt-4 text-lg text-gray-300">I am Muhammad Momin, a passionate web developer.</p>
         <Link href="/projects">
@@ -36,9 +28,10 @@ export default function Home() {
           </button>
         </Link>
       </div>
+      
 
       {/* Key Achievements Section */}
-      <section className="relative z-10 p-8 mt-10 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
+      <section className="relative z-10 p-8 mt-28 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm transition-transform duration-500 ease-in-out hover:scale-105" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
 >
         <h2 className="text-center text-3xl font-bold text-[#F9A602]">Key Achievements</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -51,20 +44,22 @@ export default function Home() {
             { title: "2+", description: "Projects in Development" },
             { title: "Class Leader", description: "Leadership Role" }
           ].map((achievement, index) => (
-            <div key={index} className="p-6 rounded-md bg-gray-900 bg-opacity-40 text-center">
+            <div key={index} className="p-6 rounded-md bg-gray-600 bg-opacity-40 text-center">
               <h3 className="text-2xl font-bold text-white">{achievement.title}</h3>
               <p className="text-gray-300">{achievement.description}</p>
             </div>
           ))}
+        
         </div>
+
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="relative z-10 p-8 mt-24 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
+    
+      <section className="relative z-10 p-8 mt-52 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm transition-transform duration-500 ease-in-out hover:scale-105" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
 >
         <h2 className="text-center text-3xl font-bold text-[#F9A602]">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          {/* Project Cards */}
+          
           {[
             {
               title: "Hackathon Project: Dynamic Resume Builder",
@@ -77,7 +72,7 @@ export default function Home() {
               link: "#", // Update with actual project link
             }
           ].map((project, index) => (
-            <div key={index} className="p-6 rounded-md bg-gray-900 bg-opacity-40 flex flex-col items-center text-center">
+            <div key={index} className="p-6 rounded-md bg-gray-600 bg-opacity-40 flex flex-col items-center text-center">
               <h3 className="text-2xl font-bold text-white">{project.title}</h3>
               <p className="mt-4 text-gray-300">{project.description}</p>
               <Link href={project.link}>
@@ -88,8 +83,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Collaboration Section */}
-      <section className="relative z-10 p-8 mt-24 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
+    
+      <section className="relative z-10 p-8 mt-52 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm transition-transform duration-500 ease-in-out hover:scale-105" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
 >
         <h2 className="text-center text-3xl font-bold text-[#F9A602]">Let's Collaborate!</h2>
         <p className="text-center mt-4 text-gray-300">
@@ -100,13 +95,13 @@ export default function Home() {
         </p>
         <div className="text-center mt-6">
           <Link href="/contact">
-            <button className="bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 hover:shadow-lg transition-all duration-300">Contact Me</button>
+            <button className="bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 hover:shadow-lg transition-all duration-300 ">Contact Me</button>
           </Link>
         </div>
       </section>
 
-      {/* Social Media Links Section */}
-      <section className="relative z-10 p-8 mt-24 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
+     
+      <section className="relative z-10 p-8 mt-52 mx-10 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm transition-transform duration-500 ease-in-out hover:scale-105" style={{ boxShadow: '0 4px 15px rgba(255, 255, 0, 0.5)' }} // Yellow shadow
 >
         <h2 className="text-center text-3xl font-bold text-[#F9A602]">Connect with Me</h2>
         <div className="flex justify-center mt-6 space-x-6">
@@ -123,10 +118,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <div className="relative z-10 mt-10">
+    
+   
         <Footer />
-      </div>
+      
     </div>
-  );
-}
+    </div>
+   
+  )}

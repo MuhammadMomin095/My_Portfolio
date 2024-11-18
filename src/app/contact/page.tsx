@@ -7,21 +7,18 @@ import Footer from '../components/Footer'; // Importing Footer
 
 const Contact: React.FC = () => {
     return (
-        <div className="min-h-screen bg-cover bg-center relative"
-             style={{ backgroundImage: 'url("/images/6.jpg")' }}> {/* Background image */}
-
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className='bg-gradient-to-r from-black via-gray-950 to-slate-950 w-[99vw]'>
 
             {/* Navbar */}
-            <div className="relative z-10">
+            
                 <Navbar />
-            </div>
+                <div className="pt-52">
+           
 
             {/* Contact Section */}
-            <div className="relative z-10 p-8 mx-10 mt-24 bg-white bg-opacity-30 rounded-lg shadow-xl" style={{ boxShadow: '0 4px 15px rgba(255, 165, 0, 0.5)' }} // Orange shadow
+            <div className="relative z-10 p-8 mx-10 mt-24 bg-white bg-opacity-30 rounded-lg shadow-xl transition-transform duration-500 ease-in-out hover:scale-105" style={{ boxShadow: '0 4px 15px rgba(255, 165, 0, 0.5)' }} // Orange shadow
 >
-                <h1 className="text-4xl font-bold mb-4 text-center text-[#F9A602]">Contact Me</h1> {/* Updated Heading Color */}
+                <h1 className="text-4xl font-bold mb-4 text-center text-[#F9A602] drop-shadow-[2px_2px_4px_rgba(220,38,38,0.8)]">Contact Me</h1>
 
                 {/* Contact Form */}
                 <form className="space-y-6" 
@@ -62,7 +59,7 @@ const Contact: React.FC = () => {
                 </form>
 
                 {/* Additional Information */}
-                <div className="mt-8 text-white" style={{ boxShadow: '0 4px 15px rgba(255, 165, 0, 0.5)' }} // Orange shadow
+                <div className="mt-8 text-white"
 >
                     <h2 className="text-2xl font-bold mb-2 text-center text-[#F9A602]">Get in Touch</h2>
                     <p className="text-lg text-center mb-2">Feel free to reach out for any inquiries or collaborations!</p>
@@ -86,6 +83,7 @@ const Contact: React.FC = () => {
             <div className="relative z-10 mt-10">
                 <Footer />
             </div>
+        </div>
         </div>
     );
 };

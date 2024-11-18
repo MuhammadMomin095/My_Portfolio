@@ -7,21 +7,19 @@ import Footer from '../components/Footer'; // Importing Footer
 
 const About: React.FC = () => {
     return (
-        <div className="min-h-screen bg-cover bg-center relative" 
-             style={{ backgroundImage: 'url("/images/6.jpg")' }}> {/* Background image */}
+        <div className='bg-gradient-to-r from-black via-gray-950 to-slate-950'>
             
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black opacity-40"></div> {/* Increased opacity */}
-
-            {/* Navbar */}
-            <div className="relative z-10">
+         
+           
                 <Navbar />
-            </div>
+
+                <div className="min-h-screen  bg-cover bg-center relative z-10 pt-36" >
+           
 
             {/* About Section */}
-            <div className="relative z-10 p-8 mx-10 mt-24 bg-white bg-opacity-30 rounded-lg shadow-lg" style={{ boxShadow: '0 4px 15px rgba(0, 128, 128, 0.5)' }} // Teal shadow
+            <div className="relative z-10 p-8 mx-10 mt-24 bg-white bg-opacity-30 rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105" style={{ boxShadow: '0 4px 15px rgba(0, 128, 128, 0.5)' }} // Teal shadow
 >
-                <h1 className="text-4xl font-bold mb-4 text-center text-[#F9A602]">About Me</h1> {/* Updated Heading Color */}
+                <h1 className="text-4xl font-bold mb-4 text-center text-[#F9A602] drop-shadow-[2px_2px_4px_rgba(220,38,38,0.8)]">About Me</h1> {/* Updated Heading Color */}
 
                 {/* Image Section */}
                 <div className="flex justify-center mb-8">
@@ -78,6 +76,7 @@ const About: React.FC = () => {
             <div className="relative z-10 mt-10">
                 <Footer />
             </div>
+        </div>
         </div>
     );
 };
