@@ -26,7 +26,7 @@ const About: React.FC = () => {
                     <img 
                         src="/images/Momin.jpg" // Replace with your actual image path
                         alt="Muhammad Momin"
-                        className="w-32 h-32 rounded-full border-4 border-gray-800 shadow-lg" // Added shadow for better appearance
+                        className="w-40 h-40 rounded-full border-4  border-emerald-300 shadow-lg" // Added shadow for better appearance
                     />
                 </div>
 
