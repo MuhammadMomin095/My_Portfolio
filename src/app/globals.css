@@ -2,97 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
+.animate-typing {
+  position: relative;
+}
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #F9FAFB;
-  color: #333;
+.animate-typing::before {
+  content: '|';
+  font-size: 40px;
   position: absolute;
-}
-/* Main Navbar Styling */
-nav {
-  background-color: #2D2E32;
-  color: #fff;
-  padding: 1rem 2rem;
-  position: sticky;
+  left: 0;
   top: 0;
-  z-index: 10;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #06141B;
+  animation: cursor-blink 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  opacity: 1;
 }
-/* Navbar Links */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  opacity: 0;
+  animation: typing 4s linear forwards, fade-in 0.5s linear forwards; /* Changed cubic-bezier to linear for consistent speed */
 }
-nav ul li {
-  margin: 0 1rem;
+
+/* Smooth delay for each text block */
+.typing-text:nth-child(1) {
+  animation-delay: 0.5s; /* Delay for first text */
 }
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  transition: color 0.3s ease-in-out;
+
+.typing-text:nth-child(2) {
+  animation-delay: 3.8s; /* Overlap for second text */
 }
-nav ul li a:hover {
-  color: #F9A826;
+
+.typing-text:nth-child(3) {
+  animation-delay: 7.2s; /* Overlap for third text */
 }
-/* Responsive Styles */
-@media (max-width: 768px) {
-  /* For mobile screens, stack the items vertically */
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #2D2E32; 
-    padding: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.typing-text:nth-child(4) {
+  animation-delay: 10.6s; /* Overlap for fourth text */
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
     width: 100%;
-    height: 100vh;
-    display: none; /* Initially hidden */
-    box-shadow: none;
-    z-index: 1; /* Ensure menu stays above content */
-  }
-  nav ul li {
-    margin: 1rem 0;
-  }
-  nav ul li a {
-    font-size: 1.5rem;
-  }
-  /* Show the menu toggle button */
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  /* When menu is active, show the mobile menu */
-  nav.active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav.active ul li {
-    text-align: left;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-/* Further adjustment for very small screens */
-@media (max-width: 480px) {
-  nav ul li a {
-    font-size: 1.2rem; 
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Cursor blinking */
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Hide the cursor after typing ends */
+.animate-typing::before {
+  animation: hide-cursor 0.3s ease-in-out forwards;
+}
+
+@keyframes hide-cursor {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
