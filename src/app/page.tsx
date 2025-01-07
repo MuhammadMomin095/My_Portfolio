@@ -10,99 +10,105 @@ export default function Home() {
 
   return (
     <div className="bg-gradient-to-r from-[#CCD0CF] via-[#253745] to-[#06141B]">
+
+
+
+
+      
       {/* Hero Section */}
       <section className="relative flex flex-col items-start justify-center py-24">
-        <Link href="/">
-          <img
-            className="w-44 h-44 absolute top-4 left-24 transform sm:left-10"
-            alt="logo"
-            src="images/3.png"
-          />
-        </Link>
-
-        <div className="px-8 sm:px-12 mt-32 sm:mt-48">
-          {/* Text Content */}
-          <h2 className="text-3xl sm:text-4xl font-bold text-black animate-typing">
-            <span className="typing-text">Hi, I am </span>
-          </h2>
-
-          <h1 className="text-5xl sm:text-7xl font-bold mt-4 text-black animate-typing">
-            <span className="typing-text">Muhammad</span>
-          </h1>
-
-          <h1 className="text-5xl sm:text-7xl font-bold mt-4 text-black animate-typing">
-            <span className="typing-text">Momin</span>
-          </h1>
-
-          <p className="text-xl sm:text-2xl font-bold mt-3 text-[#CCD0CF] lg:text-gray-700 animate-typing">
-            <span className="typing-text">Front-end Developer | UI/UX Designer</span>
-          </p>
-
-          {/* Personal Introduction */}
-          <p className="text-lg mt-14 sm:text-xl border-l-2 border-gray-600 pl-6  max-w-xl w-3/4 text-[#CCD0CF] lg:text-gray-800 ">
-            A passionate web developer and designer with a knack for creating dynamic, responsive, and user-friendly websites. I specialize in bringing creative concepts to life with a focus on sleek design and optimized performance.
-          </p>
-
-          <Link href="projects">
-             
-           <div className="text-center py-8 mt-14 w-60 rounded-full justify-center flex  bg-black text-gray-400" style={{ boxShadow: " 16px 16px 20px #06141B" }} >
-           <p>Explore My Work</p>
-         </div>
-      
-          </Link>
-        </div>
-
-        {/* Social Icons */}
-        <div className="px-8 sm:px-24 flex sm:mt-20 space-x-6 text-gray-600">
-          <Link href="https://github.com/MuhammadMomin095" target="_blank" title="Visit my GitHub">
-            <FaGithub className="w-11 h-11 hover:text-black transition" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/muhammad-momin-62069b2b9/" target="_blank" title="Connect with me on LinkedIn">
-            <FaLinkedin className="w-11 h-11 hover:text-black transition" />
-          </Link>
-          <Link href="https://www.instagram.com/mominshykh/?hl=en" target="_blank" title="Follow me on Instagram">
-            <FaInstagram className="w-11 h-11 hover:text-black transition" />
-          </Link>
-        </div>
-
-      
-       {/* Hero Image */}
-     <img
-  src="images/MM.png"
-  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:left-3/4 object-cover w-auto h-auto sm:w-auto sm:h-auto z-10"
-  alt="Hero Image"
+  <Link href="/">
+    <img
+      className="w-44 h-44 absolute top-4 left-24 sm:left-10"
+      alt="logo"
+      src="images/3.png"
     />
+  </Link>
 
 
-    
-     {/* Desktop Navigation Buttons */}
-     <div className="absolute top-10 right-10 hidden md:flex flex-wrap gap-4 px-6 py-3 z-10">
-          <Link href="/" className="px-4 rounded-full text-xl text-white font-bold transition">Home</Link>
-          <Link href="about" className="px-4 rounded-full text-xl text-white font-bold transition">About Me</Link>
-          <Link href="skills" className="px-4 rounded-full text-xl text-white font-bold transition">Skills</Link>
-          <Link href="projects" className="px-4 rounded-full text-xl text-white font-bold transition">Portfolio</Link>
-          <Link href="contact" className="px-4 rounded-full h-9 text-xl bg-white text-black font-bold border-2 border-black hover:bg-gray-100 transition">Contact Me</Link>
-        </div>
+  <div className="flex flex-col lg:flex-row relative">
+  {/* Text Content */}
+  <div className="px-8 sm:px-12 mt-32 sm:mt-48 z-10 relative sm:text-start">
+    <h2 className="text-3xl sm:text-4xl font-bold text-black animate-typing">
+      <span className="typing-text">Hi, I am </span>
+    </h2>
 
-        {/* Mobile Hamburger Button */}
-        <div className="md:hidden flex items-center absolute top-16 right-10 z-10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <button className="text-black focus:outline-none">
-            <div className={`w-6 h-1 bg-white my-1 rounded transition-all ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}></div>
-            <div className={`w-6 h-1 bg-white my-1 rounded transition-all ${isMenuOpen ? "opacity-0" : ""}`}></div>
-            <div className={`w-6 h-1 bg-white my-1 rounded transition-all ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></div>
-          </button>
-        </div>
+    <h1 className="text-5xl sm:text-7xl font-bold mt-4 text-black animate-typing">
+      <span className="typing-text">Muhammad</span>
+    </h1>
 
-        {/* Mobile Menu */}
-        <div className={`md:hidden w-full bg-gradient-to-r from-[#06141B] via-[#9BA8AB] to-[#253745] absolute top-20 left-0 ${isMenuOpen ? "block" : "hidden"} p-4 z-10`}>
-          <Link href="/" className="block text-white py-2">Home</Link>
-          <Link href="about" className="block text-white py-2">About Me</Link>
-          <Link href="skills" className="block text-white py-2">Skills</Link>
-          <Link href="projects" className="block text-white py-2">Portfolio</Link>
-          <Link href="contact" className="block text-white py-2">Contact Me</Link>
-        </div>
+    <h1 className="text-5xl sm:text-7xl font-bold mt-4 text-black animate-typing">
+      <span className="typing-text">Momin</span>
+    </h1>
 
-      </section>
+    <p className="text-xl sm:text-2xl font-bold mt-3 text-[#CCD0CF] lg:text-gray-700 animate-typing">
+      <span className="typing-text">Front-end Developer | UI/UX Designer</span>
+    </p>
+
+    {/* Personal Introduction */}
+    <p className="text-lg mt-14 sm:text-xl border-l-2 border-gray-600 pl-6 max-w-xl w-full sm:w-3/4 text-[#CCD0CF] lg:text-gray-800">
+      A passionate web developer and designer with a knack for creating dynamic, responsive, and user-friendly websites. I specialize in bringing creative concepts to life with a focus on sleek design and optimized performance.
+    </p>
+
+    <Link href="projects">
+      <div className="text-center py-8 mt-14 w-60 rounded-full justify-center flex bg-black text-gray-400" style={{ boxShadow: "16px 16px 20px #06141B" }}>
+        <p>Explore My Work</p>
+      </div>
+    </Link>
+
+    {/* Social Icons */}
+    <div className="px-8 sm:px-24 flex mt-20 space-x-6 text-gray-600">
+      <Link href="https://github.com/MuhammadMomin095" target="_blank" title="Visit my GitHub">
+        <FaGithub className="w-11 h-11 hover:text-black transition" />
+      </Link>
+      <Link href="https://www.linkedin.com/in/muhammad-momin-62069b2b9/" target="_blank" title="Connect with me on LinkedIn">
+        <FaLinkedin className="w-11 h-11 hover:text-black transition" />
+      </Link>
+      <Link href="https://www.instagram.com/mominshykh/?hl=en" target="_blank" title="Follow me on Instagram">
+        <FaInstagram className="w-11 h-11 hover:text-black transition" />
+      </Link>
+    </div>
+  </div>
+
+  {/* Hero Image */}
+  <img
+    src="images/MM.png"
+    className=" relative object-cover w-full sm:w-auto sm:h-auto sm:mt-16 z-0"
+    alt="Hero Image"
+  />
+</div>
+
+
+ 
+
+  {/* Desktop Navigation Buttons */}
+  <div className="absolute top-10 right-10 hidden md:flex flex-wrap gap-4 px-6 py-3 z-10">
+    <Link href="/" className="px-4 rounded-full text-xl text-white font-bold transition">Home</Link>
+    <Link href="about" className="px-4 rounded-full text-xl text-white font-bold transition">About Me</Link>
+    <Link href="skills" className="px-4 rounded-full text-xl text-white font-bold transition">Skills</Link>
+    <Link href="projects" className="px-4 rounded-full text-xl text-white font-bold transition">Portfolio</Link>
+    <Link href="contact" className="px-4 rounded-full h-9 text-xl bg-white text-black font-bold border-2 border-black hover:bg-gray-100 transition">Contact Me</Link>
+  </div>
+
+  {/* Mobile Hamburger Button */}
+  <div className="md:hidden flex items-center absolute top-16 right-10 z-10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+    <button className="text-black focus:outline-none">
+      <div className={`w-6 h-1 bg-white my-1 rounded transition-all ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}></div>
+      <div className={`w-6 h-1 bg-white my-1 rounded transition-all ${isMenuOpen ? "opacity-0" : ""}`}></div>
+      <div className={`w-6 h-1 bg-white my-1 rounded transition-all ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></div>
+    </button>
+  </div>
+
+  {/* Mobile Menu */}
+  <div className={`md:hidden w-full bg-gradient-to-r from-[#06141B] via-[#9BA8AB] to-[#253745] absolute top-20 left-0 ${isMenuOpen ? "block" : "hidden"} p-4 z-10`}>
+    <Link href="/" className="block text-white py-2">Home</Link>
+    <Link href="about" className="block text-white py-2">About Me</Link>
+    <Link href="skills" className="block text-white py-2">Skills</Link>
+    <Link href="projects" className="block text-white py-2">Portfolio</Link>
+    <Link href="contact" className="block text-white py-2">Contact Me</Link>
+  </div>
+</section>
+
 
 
 
