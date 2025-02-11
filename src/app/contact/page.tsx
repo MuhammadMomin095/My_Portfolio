@@ -69,7 +69,8 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <form className="max-w-2xl mx-auto space-y-12 mt-24">
+      <form action="29830fbd-76b6-40fe-8d8c-630a992b22b4" method='POST' className="max-w-2xl mx-auto space-y-12 mt-24">
+        <input type="hidden" name="access_key" value="your access key" />
         {/* Name Field */}
         <div className="mb-6">        
           <input

@@ -73,7 +73,8 @@ export default function Home() {
   {/* Hero Image */}
   <img
     src="images/MM.png"
-    className=" relative object-cover w-full sm:w-auto sm:h-auto sm:mt-16 z-0"
+    className=" relative object-cover w-full sm:w-auto sm:h-auto sm:mt-16 z-0"style={{ filter: "drop-shadow(20px 20px 20px #758f9c)" }}
+
     alt="Hero Image"
   />
 </div>
@@ -82,7 +83,7 @@ export default function Home() {
  
 
   {/* Desktop Navigation Buttons */}
-  <div className="absolute top-10 right-10 hidden md:flex flex-wrap gap-4 px-6 py-3 z-10">
+  <div className="absolute top-10 right-10 hidden md:flex flex-wrap gap-4 px-6 py-3 z-10 ">
     <Link href="/" className="px-4 rounded-full text-xl text-white font-bold transition">Home</Link>
     <Link href="about" className="px-4 rounded-full text-xl text-white font-bold transition">About Me</Link>
     <Link href="skills" className="px-4 rounded-full text-xl text-white font-bold transition">Skills</Link>
